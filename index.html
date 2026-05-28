@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fetta Djedour — Experte IA & Architecture Data</title>
+  <meta name="description" content="Experte en Intelligence Artificielle spécialisée dans la conception et le déploiement de solutions IA à forte valeur ajoutée." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="top">
+    <a href="#top" class="nav-logo">FD<span class="dot">.</span></a>
+    <nav class="nav-links" aria-label="Navigation principale">
+      <a href="#about">À propos</a>
+      <a href="#projects">Projets</a>
+      <a href="#skills">Compétences</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="mailto:fetta.sizine94@gmail.com" class="nav-cta">Me contacter</a>
+    <button class="burger" aria-label="Menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" onclick="toggleMenu()">À propos</a>
+    <a href="#projects" onclick="toggleMenu()">Projets</a>
+    <a href="#skills" onclick="toggleMenu()">Compétences</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <div class="hero-tag">Disponible — Île-de-France &amp; Télétravail</div>
+      <h1 class="hero-title">
+        Experte IA<br />
+        <em>&amp; Architecture Data</em>
+      </h1>
+      <p class="hero-sub">Je conçois et déploie des agents IA et solutions data qui transforment réellement les opérations — de l'architecture technique au ROI mesurable.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+        <a href="#contact" class="btn btn-ghost">Discutons</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-n">3+</span><span class="stat-l">Agents IA déployés</span></div>
+        <div class="stat-sep"></div>
+        <div class="stat"><span class="stat-n">85%</span><span class="stat-l">Précision modèle ventes</span></div>
+        <div class="stat-sep"></div>
+        <div class="stat"><span class="stat-n">–30%</span><span class="stat-l">Temps de traitement data</span></div>
+      </div>
+    </div>
+    <div class="hero-grid" aria-hidden="true"></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-label">À propos</div>
+      <div class="about-layout">
+        <div class="about-text">
+          <h2 class="section-title">Une approche technique<br />au service du business</h2>
+          <p>Avec un MBA Big Data &amp; IA (ESTIAM Paris) et une expérience terrain en Data Architecture, NLP et Machine Learning, j'aide les organisations à passer du POC à la production réelle.</p>
+          <p>Mon positionnement : allier la rigueur de l'ingénierie data à une vision orientée résultats mesurables — pas juste des modèles, des solutions qui tournent et créent de la valeur.</p>
+          <div class="about-tags">
+            <span class="tag">Machine Learning</span>
+            <span class="tag">NLP</span>
+            <span class="tag">Agents IA</span>
+            <span class="tag">Data Engineering</span>
+            <span class="tag">Scoring bancaire</span>
+            <span class="tag">Automatisation</span>
+          </div>
+        </div>
+        <div class="about-xp">
+          <div class="xp-item">
+            <div class="xp-period">2024 — Présent</div>
+            <div class="xp-role">Data Solutions Architect</div>
+            <div class="xp-company">DATA RAN · Paris</div>
+          </div>
+          <div class="xp-item">
+            <div class="xp-period">2023 — 2024</div>
+            <div class="xp-role">Data Analyst</div>
+            <div class="xp-company">WIFIRST · Paris</div>
+          </div>
+          <div class="xp-item">
+            <div class="xp-period">2018 — 2021</div>
+            <div class="xp-role">Chef de Projet IT</div>
+            <div class="xp-company">Électronique Industrie Service · Alger</div>
+          </div>
+          <div class="xp-item xp-edu">
+            <div class="xp-period">2022 — 2024</div>
+            <div class="xp-role">MBA Big Data &amp; IA</div>
+            <div class="xp-company">ESTIAM · Paris</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section-label">Projets phares</div>
+      <h2 class="section-title">Ce que j'ai construit</h2>
+
+      <div class="projects-grid">
+
+        <!-- SIRA ASSIST -->
+        <article class="project-card project-featured">
+          <div class="project-header">
+            <div class="project-num">01</div>
+            <div class="project-badge">Agent conversationnel</div>
+          </div>
+          <h3 class="project-title">SIRA Assist</h3>
+          <p class="project-desc">Agent IA intelligent d'accompagnement à l'emploi. SIRA guide les candidats à travers leur parcours de recherche d'emploi : analyse de CV, conseils personnalisés, préparation aux entretiens et orientation vers les offres pertinentes — disponible 24h/24.</p>
+          <div class="project-stack">
+            <span>NLP</span><span>LLM</span><span>RAG</span><span>Python</span>
+          </div>
+          <div class="project-metrics">
+            <div class="metric"><span class="metric-n">24/7</span><span class="metric-l">Disponibilité</span></div>
+            <div class="metric"><span class="metric-n">Multi-canal</span><span class="metric-l">Web &amp; mobile</span></div>
+          </div>
+        </article>
+
+        <!-- AGENT VOYAGES -->
+        <article class="project-card">
+          <div class="project-header">
+            <div class="project-num">02</div>
+            <div class="project-badge">Agent opérationnel</div>
+          </div>
+          <h3 class="project-title">Agent IA — Voyages étudiants France–Chine</h3>
+          <p class="project-desc">Agent IA de gestion de bout en bout des voyages étudiants entre la France et la Chine. Planification des séjours, gestion des documents administratifs, coordination logistique et suivi en temps réel des participants.</p>
+          <div class="project-stack">
+            <span>Agents IA</span><span>Automatisation</span><span>APIs</span><span>Workflows</span>
+          </div>
+          <div class="project-metrics">
+            <div class="metric"><span class="metric-n">–60%</span><span class="metric-l">Charge administrative</span></div>
+            <div class="metric"><span class="metric-n">100%</span><span class="metric-l">Traçabilité docs</span></div>
+          </div>
+        </article>
+
+        <!-- AGENT RH -->
+        <article class="project-card">
+          <div class="project-header">
+            <div class="project-num">03</div>
+            <div class="project-badge">Agent RH</div>
+          </div>
+          <h3 class="project-title">Agent IA — Assistant RH autonome</h3>
+          <p class="project-desc">Agent IA qui prend en charge les missions d'un assistant RH : traitement des tickets collaborateurs, onboarding automatisé, gestion des congés et absences, réponses aux questions réglementaires — avec escalade intelligente vers un RH humain.</p>
+          <div class="project-stack">
+            <span>Orchestration</span><span>RAG</span><span>APIs RH</span><span>Monitoring</span>
+          </div>
+          <div class="project-metrics">
+            <div class="metric"><span class="metric-n">–65%</span><span class="metric-l">Temps de traitement</span></div>
+            <div class="metric"><span class="metric-n">92%</span><span class="metric-l">Satisfaction équipes</span></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section-label">Compétences</div>
+      <h2 class="section-title">Stack technique</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <div class="skill-group-title">IA &amp; Machine Learning</div>
+          <ul>
+            <li>Modélisation prédictive &amp; scoring</li>
+            <li>NLP &amp; agents conversationnels</li>
+            <li>RAG &amp; Vector Search</li>
+            <li>Scikit-learn, Python, R</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Data Engineering</div>
+          <ul>
+            <li>Pipelines ELK Stack</li>
+            <li>SQL avancé</li>
+            <li>Pandas, NumPy</li>
+            <li>Dataiku, Make</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Visualisation &amp; Reporting</div>
+          <ul>
+            <li>Power BI</li>
+            <li>Tableau</li>
+            <li>Dashboards temps réel</li>
+            <li>Reporting automatisé</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Gestion de projet</div>
+          <ul>
+            <li>Méthodologie Agile / Scrum</li>
+            <li>Coordination équipes techniques</li>
+            <li>Pilotage stratégique IA</li>
+            <li>Gouvernance des données</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact-block">
+        <div class="section-label">Contact</div>
+        <h2 class="contact-title">Un projet en tête ?<br />Parlons-en.</h2>
+        <p class="contact-sub">Je suis disponible pour des missions de consulting, des projets IA sur mesure ou des collaborations à long terme. Réponse sous 48 h.</p>
+        <div class="contact-links">
+          <a href="mailto:fetta.sizine94@gmail.com" class="btn btn-primary">fetta.sizine94@gmail.com</a>
+          <a href="tel:+33666105188" class="btn btn-ghost">06 66 10 51 88</a>
+        </div>
+        <div class="contact-linkedin">
+          <a href="https://linkedin.com/in/fetta-djedour" target="_blank" rel="noopener">LinkedIn — Fetta Djedour ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>Fetta Djedour · Experte IA &amp; Architecture Data</span>
+      <span>© 2026</span>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
