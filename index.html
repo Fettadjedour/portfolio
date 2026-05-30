@@ -3,235 +3,438 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fetta Djedour — Experte IA & Architecture Data</title>
-  <meta name="description" content="Experte en Intelligence Artificielle spécialisée dans la conception et le déploiement de solutions IA à forte valeur ajoutée." />
+  <title>Fetta Djedour — Experte IA Appliquée</title>
+  <meta name="description" content="Experte IA Appliquée — Automatisation & Architecture Data. Agents IA, NLP, RAG, FastAPI, pgvector pour PME & ETI." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- NAV -->
   <header class="nav" id="top">
-    <a href="#top" class="nav-logo">FD<span class="dot">.</span></a>
-    <nav class="nav-links" aria-label="Navigation principale">
-      <a href="#about">À propos</a>
+    <a href="#top" class="nav-logo">FD<span>.</span></a>
+    <nav class="nav-links">
+      <a href="#about">Profil</a>
       <a href="#projects">Projets</a>
-      <a href="#skills">Compétences</a>
+      <a href="#sira">SIRA Assist</a>
+      <a href="#voyages">Agent Voyages</a>
+      <a href="#skills">Stack</a>
       <a href="#contact">Contact</a>
     </nav>
     <a href="mailto:fetta.sizine94@gmail.com" class="nav-cta">Me contacter</a>
-    <button class="burger" aria-label="Menu" onclick="toggleMenu()">
+    <button class="burger" aria-label="Menu" onclick="document.getElementById('mob').classList.toggle('open')">
       <span></span><span></span><span></span>
     </button>
   </header>
-
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#about" onclick="toggleMenu()">À propos</a>
-    <a href="#projects" onclick="toggleMenu()">Projets</a>
-    <a href="#skills" onclick="toggleMenu()">Compétences</a>
-    <a href="#contact" onclick="toggleMenu()">Contact</a>
+  <div class="mobile-menu" id="mob">
+    <a href="#about" onclick="document.getElementById('mob').classList.remove('open')">Profil</a>
+    <a href="#projects" onclick="document.getElementById('mob').classList.remove('open')">Projets</a>
+    <a href="#sira" onclick="document.getElementById('mob').classList.remove('open')">SIRA Assist</a>
+    <a href="#voyages" onclick="document.getElementById('mob').classList.remove('open')">Agent Voyages</a>
+    <a href="#skills" onclick="document.getElementById('mob').classList.remove('open')">Stack</a>
+    <a href="#contact" onclick="document.getElementById('mob').classList.remove('open')">Contact</a>
   </div>
 
   <!-- HERO -->
   <section class="hero" id="hero">
-    <div class="hero-inner">
-      <div class="hero-tag">Disponible — Île-de-France &amp; Télétravail</div>
-      <h1 class="hero-title">
-        Experte IA<br />
-        <em>&amp; Architecture Data</em>
-      </h1>
-      <p class="hero-sub">Je conçois et déploie des agents IA et solutions data qui transforment réellement les opérations — de l'architecture technique au ROI mesurable.</p>
+    <div class="hero-bg"></div>
+    <div class="hero-grid-lines" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <div class="hero-status"><span class="pulse"></span>Disponible — Île-de-France &amp; Télétravail</div>
+      <h1 class="hero-title">Experte IA<br/><span class="gradient-text">Appliquée</span></h1>
+      <p class="hero-role">Automatisation &amp; Architecture Data</p>
+      <p class="hero-sub">Je conçois des agents IA, pipelines data et systèmes intelligents qui s'intègrent en production — avec des résultats mesurables dès les premières semaines.</p>
       <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">Voir mes projets</a>
-        <a href="#contact" class="btn btn-ghost">Discutons</a>
+        <a href="#sira" class="btn btn-primary">Voir SIRA Assist</a>
+        <a href="#projects" class="btn btn-ghost">Tous les projets</a>
       </div>
-      <div class="hero-stats">
-        <div class="stat"><span class="stat-n">3+</span><span class="stat-l">Agents IA déployés</span></div>
-        <div class="stat-sep"></div>
-        <div class="stat"><span class="stat-n">85%</span><span class="stat-l">Précision modèle ventes</span></div>
-        <div class="stat-sep"></div>
-        <div class="stat"><span class="stat-n">–30%</span><span class="stat-l">Temps de traitement data</span></div>
+      <div class="hero-kpis">
+        <div class="kpi"><div class="kpi-top"><span class="kpi-n" data-target="85">0</span><span class="kpi-u">%</span></div><span class="kpi-l">Précision modèle prédictif</span></div>
+        <div class="kpi-sep"></div>
+        <div class="kpi"><div class="kpi-top"><span class="kpi-n" data-target="60">0</span><span class="kpi-u">%</span></div><span class="kpi-l">Réduction tâches répétitives</span></div>
+        <div class="kpi-sep"></div>
+        <div class="kpi"><div class="kpi-top"><span class="kpi-n" data-target="12">0</span><span class="kpi-u">j</span></div><span class="kpi-l">SIRA Assist livré</span></div>
+        <div class="kpi-sep"></div>
+        <div class="kpi"><div class="kpi-top"><span class="kpi-n" data-target="3">0</span><span class="kpi-u">+</span></div><span class="kpi-l">Agents IA déployés</span></div>
       </div>
     </div>
-    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-visual" aria-hidden="true">
+      <canvas id="heroChart"></canvas>
+    </div>
   </section>
 
   <!-- ABOUT -->
   <section class="section about" id="about">
     <div class="container">
-      <div class="section-label">À propos</div>
-      <div class="about-layout">
-        <div class="about-text">
-          <h2 class="section-title">Une approche technique<br />au service du business</h2>
-          <p>Avec un MBA Big Data &amp; IA (ESTIAM Paris) et une expérience terrain en Data Architecture, NLP et Machine Learning, j'aide les organisations à passer du POC à la production réelle.</p>
-          <p>Mon positionnement : allier la rigueur de l'ingénierie data à une vision orientée résultats mesurables — pas juste des modèles, des solutions qui tournent et créent de la valeur.</p>
-          <div class="about-tags">
-            <span class="tag">Machine Learning</span>
-            <span class="tag">NLP</span>
-            <span class="tag">Agents IA</span>
-            <span class="tag">Data Engineering</span>
-            <span class="tag">Scoring bancaire</span>
-            <span class="tag">Automatisation</span>
+      <div class="about-grid">
+        <div>
+          <div class="section-label">Profil</div>
+          <h2 class="section-title">Technique.<br/>Orientée résultats.</h2>
+          <p>MBA Big Data &amp; IA (ESTIAM Paris). Je combine expertise technique en Machine Learning, NLP et Data Engineering avec une vision orientée ROI.</p>
+          <p>Mon approche : architecturer des solutions robustes qui passent du POC à la production réelle — sans hallucinations, avec monitoring, avec valeur mesurable.</p>
+          <div class="tags">
+            <span>Agents IA</span><span>NLP</span><span>RAG</span><span>FastAPI</span>
+            <span>pgvector</span><span>Docker</span><span>Power BI</span><span>Scikit-learn</span>
           </div>
         </div>
-        <div class="about-xp">
-          <div class="xp-item">
-            <div class="xp-period">2024 — Présent</div>
-            <div class="xp-role">Data Solutions Architect</div>
-            <div class="xp-company">DATA RAN · Paris</div>
-          </div>
-          <div class="xp-item">
-            <div class="xp-period">2023 — 2024</div>
-            <div class="xp-role">Data Analyst</div>
-            <div class="xp-company">WIFIRST · Paris</div>
-          </div>
-          <div class="xp-item">
-            <div class="xp-period">2018 — 2021</div>
-            <div class="xp-role">Chef de Projet IT</div>
-            <div class="xp-company">Électronique Industrie Service · Alger</div>
-          </div>
-          <div class="xp-item xp-edu">
-            <div class="xp-period">2022 — 2024</div>
-            <div class="xp-role">MBA Big Data &amp; IA</div>
-            <div class="xp-company">ESTIAM · Paris</div>
-          </div>
+        <div class="xp-list">
+          <div class="xp"><div class="xp-dot d-blue"></div><div class="xp-body"><div class="xp-date">Oct. 2024 — Présent</div><div class="xp-role">Data Solutions Architect</div><div class="xp-co">DATA RAN · Paris</div><div class="xp-desc">Agents IA, modèles prédictifs, scoring bancaire, dashboards temps réel.</div></div></div>
+          <div class="xp"><div class="xp-dot d-violet"></div><div class="xp-body"><div class="xp-date">Mars 2023 — Sept. 2024</div><div class="xp-role">Data Analyst</div><div class="xp-co">WIFIRST · Paris</div><div class="xp-desc">Dashboards Tableau, automatisation reporting, gouvernance des données.</div></div></div>
+          <div class="xp"><div class="xp-dot d-gray"></div><div class="xp-body"><div class="xp-date">2018 — 2021</div><div class="xp-role">Chef de Projet IT</div><div class="xp-co">Électronique Industrie Service · Alger</div></div></div>
+          <div class="xp"><div class="xp-dot d-blue"></div><div class="xp-body"><div class="xp-date">2022 — 2024</div><div class="xp-role">MBA Big Data &amp; Intelligence Artificielle</div><div class="xp-co">ESTIAM · Paris</div></div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
-  <section class="section projects" id="projects">
+  <!-- PROJECTS GRID -->
+  <section class="section projects-sec" id="projects">
     <div class="container">
       <div class="section-label">Projets phares</div>
       <h2 class="section-title">Ce que j'ai construit</h2>
-
-      <div class="projects-grid">
-
-        <!-- SIRA ASSIST -->
-        <article class="project-card project-featured">
-          <div class="project-header">
-            <div class="project-num">01</div>
-            <div class="project-badge">Agent conversationnel</div>
-          </div>
-          <h3 class="project-title">SIRA Assist</h3>
-          <p class="project-desc">Agent IA intelligent d'accompagnement à l'emploi. SIRA guide les candidats à travers leur parcours de recherche d'emploi : analyse de CV, conseils personnalisés, préparation aux entretiens et orientation vers les offres pertinentes — disponible 24h/24.</p>
-          <div class="project-stack">
-            <span>NLP</span><span>LLM</span><span>RAG</span><span>Python</span>
-          </div>
-          <div class="project-metrics">
-            <div class="metric"><span class="metric-n">24/7</span><span class="metric-l">Disponibilité</span></div>
-            <div class="metric"><span class="metric-n">Multi-canal</span><span class="metric-l">Web &amp; mobile</span></div>
-          </div>
+      <div class="proj-grid">
+        <article class="proj-card proj-featured" onclick="document.getElementById('sira').scrollIntoView({behavior:'smooth'})">
+          <div class="proj-header"><span class="proj-num">01</span><span class="proj-badge b-blue">Produit SaaS · 12j</span></div>
+          <h3>SIRA Assist</h3>
+          <p>Système intelligent de résolution d'incidents — intégration Jira, moteur IA pgvector, dashboard temps réel. Zéro hallucination, 0 dépendance cloud.</p>
+          <div class="proj-stack"><span>FastAPI</span><span>pgvector</span><span>OpenAI</span><span>Docker</span><span>PostgreSQL</span></div>
+          <div class="proj-metrics"><div class="pm"><span class="pm-n">–80%</span><span class="pm-l">Temps triage</span></div><div class="pm"><span class="pm-n">7k€</span><span class="pm-l">HT livré</span></div><div class="pm"><span class="pm-n">10–30€</span><span class="pm-l">Récurrent/mois</span></div></div>
+          <div class="proj-link">Voir le détail &amp; l'interface →</div>
         </article>
-
-        <!-- AGENT VOYAGES -->
-        <article class="project-card">
-          <div class="project-header">
-            <div class="project-num">02</div>
-            <div class="project-badge">Agent opérationnel</div>
-          </div>
-          <h3 class="project-title">Agent IA — Voyages étudiants France–Chine</h3>
-          <p class="project-desc">Agent IA de gestion de bout en bout des voyages étudiants entre la France et la Chine. Planification des séjours, gestion des documents administratifs, coordination logistique et suivi en temps réel des participants.</p>
-          <div class="project-stack">
-            <span>Agents IA</span><span>Automatisation</span><span>APIs</span><span>Workflows</span>
-          </div>
-          <div class="project-metrics">
-            <div class="metric"><span class="metric-n">–60%</span><span class="metric-l">Charge administrative</span></div>
-            <div class="metric"><span class="metric-n">100%</span><span class="metric-l">Traçabilité docs</span></div>
-          </div>
+        <article class="proj-card" onclick="document.getElementById('voyages').scrollIntoView({behavior:'smooth'})">
+          <div class="proj-header"><span class="proj-num">02</span><span class="proj-badge b-violet">Agent opérationnel</span></div>
+          <h3>Agent IA — Voyages étudiants France–Chine</h3>
+          <p>Gestion bout en bout : planification, documents, coordination logistique et suivi temps réel des participants.</p>
+          <div class="proj-stack"><span>Agents IA</span><span>APIs</span><span>Workflows</span><span>NLP</span></div>
+          <div class="proj-metrics"><div class="pm"><span class="pm-n">–60%</span><span class="pm-l">Charge admin</span></div><div class="pm"><span class="pm-n">100%</span><span class="pm-l">Traçabilité</span></div></div>
+          <div class="proj-link">Voir l'interface →</div>
         </article>
-
-        <!-- AGENT RH -->
-        <article class="project-card">
-          <div class="project-header">
-            <div class="project-num">03</div>
-            <div class="project-badge">Agent RH</div>
-          </div>
-          <h3 class="project-title">Agent IA — Assistant RH autonome</h3>
-          <p class="project-desc">Agent IA qui prend en charge les missions d'un assistant RH : traitement des tickets collaborateurs, onboarding automatisé, gestion des congés et absences, réponses aux questions réglementaires — avec escalade intelligente vers un RH humain.</p>
-          <div class="project-stack">
-            <span>Orchestration</span><span>RAG</span><span>APIs RH</span><span>Monitoring</span>
-          </div>
-          <div class="project-metrics">
-            <div class="metric"><span class="metric-n">–65%</span><span class="metric-l">Temps de traitement</span></div>
-            <div class="metric"><span class="metric-n">92%</span><span class="metric-l">Satisfaction équipes</span></div>
-          </div>
+        <article class="proj-card">
+          <div class="proj-header"><span class="proj-num">03</span><span class="proj-badge b-gray">Agent RH</span></div>
+          <h3>Agent IA — Assistant RH autonome</h3>
+          <p>Traitement tickets RH, onboarding, congés, réponses réglementaires. Escalade intelligente vers un RH humain quand nécessaire.</p>
+          <div class="proj-stack"><span>Orchestration</span><span>RAG</span><span>APIs RH</span><span>Monitoring</span></div>
+          <div class="proj-metrics"><div class="pm"><span class="pm-n">–65%</span><span class="pm-l">Temps traitement</span></div><div class="pm"><span class="pm-n">92%</span><span class="pm-l">Satisfaction</span></div></div>
         </article>
+      </div>
+    </div>
+  </section>
 
+  <!-- SIRA ASSIST DEEP DIVE -->
+  <section class="section sira-sec" id="sira">
+    <div class="container">
+      <div class="section-label">Focus — Projet 01</div>
+      <h2 class="section-title">SIRA Assist<br/><em>Système Intelligent de Résolution d'Incidents</em></h2>
+
+      <!-- PROBLEME → SOLUTION -->
+      <div class="ps-grid">
+        <div class="ps-block ps-problem">
+          <div class="ps-tag">❌ Le problème</div>
+          <ul>
+            <li>Tickets Jira gérés manuellement, sans vue centralisée</li>
+            <li>Aucune détection préventive du risque d'escalade</li>
+            <li>Historique inexploité — on repart de zéro à chaque fois</li>
+            <li>Reporting manuel chronophage, zéro corrélation entre incidents</li>
+          </ul>
+        </div>
+        <div class="ps-arrow">→</div>
+        <div class="ps-block ps-solution">
+          <div class="ps-tag">✓ La solution</div>
+          <ul>
+            <li>Dashboard centralisé synchronisé Jira en temps réel</li>
+            <li>Score de risque d'escalade calculé automatiquement</li>
+            <li>Moteur de similarité : retrouve les cas résolus proches</li>
+            <li>Analytics complètes : KPIs, tendances, performance équipe</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- INTERFACE SIRA — MOCKUP -->
+      <div class="ui-showcase">
+        <div class="ui-header">
+          <div class="ui-title">Interface SIRA Assist — Dashboard principal</div>
+          <div class="ui-live"><span class="pulse-blue"></span>Live demo</div>
+        </div>
+        <div class="sira-ui">
+          <!-- Sidebar -->
+          <div class="sira-sidebar">
+            <div class="sira-logo-ui">SIRA<span>.</span></div>
+            <nav class="sira-nav">
+              <a class="sn active">📊 Dashboard</a>
+              <a class="sn">🎫 Tickets</a>
+              <a class="sn">🤖 IA Insights</a>
+              <a class="sn">📈 Analytics</a>
+              <a class="sn">⚙️ Paramètres</a>
+            </nav>
+            <div class="sira-jira-badge">🔗 Jira connecté</div>
+          </div>
+          <!-- Main content -->
+          <div class="sira-main">
+            <!-- Top bar -->
+            <div class="sira-topbar">
+              <div class="sira-topbar-title">Dashboard</div>
+              <div class="sira-topbar-actions">
+                <div class="sira-search">🔍 Rechercher un ticket...</div>
+                <div class="sira-sync">↻ Sync Jira</div>
+              </div>
+            </div>
+            <!-- KPI cards -->
+            <div class="sira-kpis">
+              <div class="sira-kpi-card">
+                <div class="skc-label">Tickets ouverts</div>
+                <div class="skc-n" style="color:#3B82F6">5</div>
+                <div class="skc-trend trend-up">↑ 2 nouveaux</div>
+              </div>
+              <div class="sira-kpi-card">
+                <div class="skc-label">Risque escalade</div>
+                <div class="skc-n" style="color:#F59E0B">30%</div>
+                <div class="skc-trend" style="color:#F59E0B">⚠ Modéré</div>
+              </div>
+              <div class="sira-kpi-card">
+                <div class="skc-label">Résolus (7j)</div>
+                <div class="skc-n" style="color:#10B981">12</div>
+                <div class="skc-trend trend-up">↑ +4 vs sem. préc.</div>
+              </div>
+              <div class="sira-kpi-card">
+                <div class="skc-label">Tps moyen résol.</div>
+                <div class="skc-n" style="color:#8B5CF6">2.4h</div>
+                <div class="skc-trend trend-down">↓ –38% vs avant</div>
+              </div>
+            </div>
+            <!-- Tickets + IA panel -->
+            <div class="sira-panels">
+              <div class="sira-tickets">
+                <div class="sp-title">Tickets récents</div>
+                <div class="ticket-item t-high">
+                  <div class="t-prio" style="background:#EF4444">HIGH</div>
+                  <div class="t-body"><div class="t-title">Panne serveur production #4421</div><div class="t-meta">Assigné: Marc D. · Il y a 23 min</div></div>
+                  <div class="t-score" style="color:#EF4444">⚠ 78%</div>
+                </div>
+                <div class="ticket-item t-med">
+                  <div class="t-prio" style="background:#F59E0B">MED</div>
+                  <div class="t-body"><div class="t-title">Erreur d'import données client #4420</div><div class="t-meta">Assigné: Julie P. · Il y a 1h</div></div>
+                  <div class="t-score" style="color:#F59E0B">⚡ 42%</div>
+                </div>
+                <div class="ticket-item t-low">
+                  <div class="t-prio" style="background:#10B981">LOW</div>
+                  <div class="t-body"><div class="t-title">Mise à jour droits accès #4419</div><div class="t-meta">Assigné: Sarah K. · Il y a 3h</div></div>
+                  <div class="t-score" style="color:#10B981">✓ 12%</div>
+                </div>
+                <div class="ticket-item t-low">
+                  <div class="t-prio" style="background:#6B7280">LOW</div>
+                  <div class="t-body"><div class="t-title">Lenteurs dashboard analytics #4418</div><div class="t-meta">Assigné: Marc D. · Il y a 5h</div></div>
+                  <div class="t-score" style="color:#6B7280">✓ 8%</div>
+                </div>
+              </div>
+              <div class="sira-ia-panel">
+                <div class="sp-title">🤖 IA — Cas similaires</div>
+                <div class="ia-ticket-ref">
+                  <div class="ia-ref-label">Ticket analysé :</div>
+                  <div class="ia-ref-title">#4421 — Panne serveur production</div>
+                </div>
+                <div class="ia-results">
+                  <div class="ia-result">
+                    <div class="ia-score" style="background:#1D4ED8">94%</div>
+                    <div class="ia-body"><div class="ia-title">#3891 — Panne serveur S3</div><div class="ia-meta">Résolu en 1h20 · Redémarrage service nginx</div></div>
+                  </div>
+                  <div class="ia-result">
+                    <div class="ia-score" style="background:#2563EB">87%</div>
+                    <div class="ia-body"><div class="ia-title">#3654 — Crash prod après déploiement</div><div class="ia-meta">Résolu en 45min · Rollback v2.3.1</div></div>
+                  </div>
+                  <div class="ia-result">
+                    <div class="ia-score" style="background:#3B82F6">71%</div>
+                    <div class="ia-body"><div class="ia-title">#3201 — Timeout base de données</div><div class="ia-meta">Résolu en 2h · Optimisation requêtes</div></div>
+                  </div>
+                </div>
+                <div class="ia-principle">💡 L'IA retrouve — elle n'invente pas. Données réelles de votre historique.</div>
+              </div>
+            </div>
+            <!-- Mini chart -->
+            <div class="sira-chart-row">
+              <div class="sp-title">Tickets par semaine</div>
+              <canvas id="siraChart" height="80"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ARCHITECTURE -->
+      <div class="arch-block">
+        <div class="block-title">Architecture technique</div>
+        <div class="arch-row">
+          <div class="arch-card ac-1"><div class="ac-icon">⚡</div><div class="ac-name">Frontend</div><div class="ac-detail">HTML5/CSS3/JS<br/>Chart.js · 5 pages</div></div>
+          <div class="arch-arr">→</div>
+          <div class="arch-card ac-2"><div class="ac-icon">🐍</div><div class="ac-name">FastAPI</div><div class="ac-detail">Python 3.13 async<br/>REST API + Jinja2</div></div>
+          <div class="arch-arr">→</div>
+          <div class="arch-card ac-3"><div class="ac-icon">🗄️</div><div class="ac-name">PostgreSQL</div><div class="ac-detail">pgvector + HNSW<br/>Docker containerisé</div></div>
+          <div class="arch-arr">→</div>
+          <div class="arch-card ac-4"><div class="ac-icon">🤖</div><div class="ac-name">OpenAI</div><div class="ac-detail">text-embedding-3-small<br/>Similarité cosinus</div></div>
+        </div>
+        <div class="arch-note">⚡ Déployable localement via Docker · Aucune dépendance cloud obligatoire · Full-text fallback intégré (0€)</div>
+      </div>
+
+      <!-- GRAPHIQUES -->
+      <div class="charts-row">
+        <div class="chart-card">
+          <div class="chart-lbl">Gain de temps par tâche (minutes)</div>
+          <canvas id="barChart" height="240"></canvas>
+        </div>
+        <div class="chart-card">
+          <div class="chart-lbl">Coûts récurrents mensuels</div>
+          <canvas id="pieChart" height="240"></canvas>
+        </div>
+      </div>
+
+      <!-- PRICING -->
+      <div class="pricing-block">
+        <div class="block-title">Chiffrage — 7 000 € HT · 12 jours</div>
+        <table class="ptable">
+          <thead><tr><th>Poste</th><th>Jours</th><th>Tarif/j</th><th>Total</th></tr></thead>
+          <tbody>
+            <tr><td>Architecture &amp; Setup</td><td>2 j</td><td>450 €</td><td>900 €</td></tr>
+            <tr><td>Intégration Jira API</td><td>2 j</td><td>450 €</td><td>900 €</td></tr>
+            <tr><td>Dashboard &amp; UI</td><td>3 j</td><td>450 €</td><td>1 350 €</td></tr>
+            <tr><td>Moteur IA Similarité</td><td>2 j</td><td>450 €</td><td>900 €</td></tr>
+            <tr><td>Analytics &amp; Insights</td><td>2 j</td><td>450 €</td><td>900 €</td></tr>
+            <tr><td>Tests &amp; Déploiement</td><td>1 j</td><td>450 €</td><td>450 €</td></tr>
+          </tbody>
+          <tfoot><tr><td colspan="3"><strong>TOTAL — 12 jours</strong></td><td><strong>7 000 € HT</strong></td></tr></tfoot>
+        </table>
+        <p class="pricing-note">50% démarrage · 50% livraison · Support 30 jours offert · Formation 1h incluse</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AGENT VOYAGES -->
+  <section class="section voyages-sec" id="voyages">
+    <div class="container">
+      <div class="section-label">Focus — Projet 02</div>
+      <h2 class="section-title">Agent IA<br/><em>Gestion de voyages étudiants France–Chine</em></h2>
+      <p class="project-intro">Agent IA de gestion de bout en bout des voyages étudiants entre la France et la Chine — planification, documents administratifs, coordination logistique, suivi temps réel.</p>
+
+      <!-- INTERFACE AGENT VOYAGES -->
+      <div class="ui-showcase">
+        <div class="ui-header">
+          <div class="ui-title">Interface Agent Voyages — Tableau de bord</div>
+          <div class="ui-live"><span class="pulse-blue"></span>Prototype</div>
+        </div>
+        <div class="voyages-ui">
+          <!-- Sidebar -->
+          <div class="voy-sidebar">
+            <div class="voy-logo">✈️ VoyageIA</div>
+            <nav class="voy-nav">
+              <a class="vn active">🗺️ Tableau de bord</a>
+              <a class="vn">👥 Étudiants</a>
+              <a class="vn">📄 Documents</a>
+              <a class="vn">🗓️ Planning</a>
+              <a class="vn">💬 Assistant IA</a>
+            </nav>
+            <div class="voy-session">
+              <div class="voy-session-label">Session active</div>
+              <div class="voy-session-name">Paris–Shanghai · Juin 2026</div>
+              <div class="voy-session-count">24 étudiants</div>
+            </div>
+          </div>
+          <!-- Main -->
+          <div class="voy-main">
+            <div class="voy-topbar">
+              <div class="voy-topbar-title">Voyage Paris → Shanghai · Juin 2026</div>
+              <div class="voy-topbar-badge">J–18 avant départ</div>
+            </div>
+            <!-- KPIs -->
+            <div class="voy-kpis">
+              <div class="vkpi"><div class="vk-n" style="color:#3B82F6">24</div><div class="vk-l">Étudiants</div></div>
+              <div class="vkpi"><div class="vk-n" style="color:#10B981">18</div><div class="vk-l">Docs complets</div></div>
+              <div class="vkpi"><div class="vk-n" style="color:#F59E0B">6</div><div class="vk-l">Docs manquants</div></div>
+              <div class="vkpi"><div class="vk-n" style="color:#8B5CF6">75%</div><div class="vk-l">Avancement</div></div>
+            </div>
+            <!-- Main panels -->
+            <div class="voy-panels">
+              <!-- Students list -->
+              <div class="voy-students">
+                <div class="vsp-title">Statut étudiants</div>
+                <div class="student-row s-ok"><div class="s-avatar" style="background:#1D4ED8">AL</div><div class="s-info"><div class="s-name">Alice Laurent</div><div class="s-status">✓ Dossier complet · Vol confirmé</div></div><div class="s-badge ok">Prêt</div></div>
+                <div class="student-row s-ok"><div class="s-avatar" style="background:#7C3AED">KM</div><div class="s-info"><div class="s-name">Karim Mansouri</div><div class="s-status">✓ Visa obtenu · Assurance OK</div></div><div class="s-badge ok">Prêt</div></div>
+                <div class="student-row s-warn"><div class="s-avatar" style="background:#D97706">SB</div><div class="s-info"><div class="s-name">Sophie Bernard</div><div class="s-status">⚠ Visa en attente · Relance auto envoyée</div></div><div class="s-badge warn">En cours</div></div>
+                <div class="student-row s-warn"><div class="s-avatar" style="background:#DC2626">TC</div><div class="s-info"><div class="s-name">Thomas Chen</div><div class="s-status">⚠ Attestation assurance manquante</div></div><div class="s-badge warn">Action requise</div></div>
+              </div>
+              <!-- IA Chat -->
+              <div class="voy-chat">
+                <div class="vsp-title">💬 Assistant IA</div>
+                <div class="chat-messages">
+                  <div class="chat-msg bot"><div class="chat-bubble">Bonjour ! 6 étudiants ont des documents manquants. J'ai envoyé des relances automatiques ce matin. Souhaitez-vous un rapport détaillé ?</div></div>
+                  <div class="chat-msg user"><div class="chat-bubble">Oui, génère le rapport pour Sophie Bernard</div></div>
+                  <div class="chat-msg bot"><div class="chat-bubble">📄 Sophie Bernard — Visa en attente depuis 12 jours. Ambassade de Chine Paris. Délai moyen constaté : 8–15 jours. Recommandation : relance consulaire sous 48h si pas de réponse.</div></div>
+                  <div class="chat-msg user"><div class="chat-bubble">Envoie la relance automatiquement</div></div>
+                  <div class="chat-msg bot"><div class="chat-bubble">✓ Relance envoyée à l'ambassade. Confirmation email à Sophie. Suivi programmé dans 48h.</div></div>
+                </div>
+                <div class="chat-input">
+                  <input type="text" placeholder="Demandez à l'agent IA..." readonly />
+                  <button>→</button>
+                </div>
+              </div>
+            </div>
+            <!-- Progress bar -->
+            <div class="voy-progress-block">
+              <div class="vsp-title">Avancement global du dossier</div>
+              <div class="progress-items">
+                <div class="prog-item"><span>Inscriptions</span><div class="prog-bar"><div class="prog-fill" style="width:100%;background:#10B981"></div></div><span>100%</span></div>
+                <div class="prog-item"><span>Visas</span><div class="prog-bar"><div class="prog-fill" style="width:75%;background:#3B82F6"></div></div><span>75%</span></div>
+                <div class="prog-item"><span>Assurances</span><div class="prog-bar"><div class="prog-fill" style="width:83%;background:#8B5CF6"></div></div><span>83%</span></div>
+                <div class="prog-item"><span>Vols confirmés</span><div class="prog-bar"><div class="prog-fill" style="width:100%;background:#10B981"></div></div><span>100%</span></div>
+                <div class="prog-item"><span>Hébergements</span><div class="prog-bar"><div class="prog-fill" style="width:90%;background:#3B82F6"></div></div><span>90%</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FEATURES -->
+      <div class="feat-grid">
+        <div class="feat-card"><div class="feat-icon">📄</div><div class="feat-name">Gestion documentaire</div><div class="feat-desc">Suivi visas, assurances, attestations. Relances automatiques si document manquant.</div></div>
+        <div class="feat-card"><div class="feat-icon">✈️</div><div class="feat-name">Coordination logistique</div><div class="feat-desc">Vols, hébergements, transferts. Synchronisation en temps réel avec les prestataires.</div></div>
+        <div class="feat-card"><div class="feat-icon">💬</div><div class="feat-name">Assistant IA conversationnel</div><div class="feat-desc">Réponses instantanées aux questions des étudiants. Actions automatiques sur commande.</div></div>
+        <div class="feat-card"><div class="feat-icon">📊</div><div class="feat-name">Dashboard temps réel</div><div class="feat-desc">Statut de chaque étudiant, alertes proactives, rapport de progression automatique.</div></div>
       </div>
     </div>
   </section>
 
   <!-- SKILLS -->
-  <section class="section skills" id="skills">
+  <section class="section skills-sec" id="skills">
     <div class="container">
       <div class="section-label">Compétences</div>
       <h2 class="section-title">Stack technique</h2>
       <div class="skills-grid">
-        <div class="skill-group">
-          <div class="skill-group-title">IA &amp; Machine Learning</div>
-          <ul>
-            <li>Modélisation prédictive &amp; scoring</li>
-            <li>NLP &amp; agents conversationnels</li>
-            <li>RAG &amp; Vector Search</li>
-            <li>Scikit-learn, Python, R</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <div class="skill-group-title">Data Engineering</div>
-          <ul>
-            <li>Pipelines ELK Stack</li>
-            <li>SQL avancé</li>
-            <li>Pandas, NumPy</li>
-            <li>Dataiku, Make</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <div class="skill-group-title">Visualisation &amp; Reporting</div>
-          <ul>
-            <li>Power BI</li>
-            <li>Tableau</li>
-            <li>Dashboards temps réel</li>
-            <li>Reporting automatisé</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <div class="skill-group-title">Gestion de projet</div>
-          <ul>
-            <li>Méthodologie Agile / Scrum</li>
-            <li>Coordination équipes techniques</li>
-            <li>Pilotage stratégique IA</li>
-            <li>Gouvernance des données</li>
-          </ul>
-        </div>
+        <div class="skill-card"><div class="sk-icon">🧠</div><div class="sk-name">IA &amp; Machine Learning</div><ul><li>Modélisation prédictive &amp; scoring</li><li>NLP &amp; agents conversationnels</li><li>RAG &amp; Vector Search (pgvector)</li><li>Scikit-learn · Python · R</li></ul></div>
+        <div class="skill-card"><div class="sk-icon">⚙️</div><div class="sk-name">Data Engineering</div><ul><li>FastAPI async · REST APIs</li><li>PostgreSQL · Docker · pgvector</li><li>Pipelines ELK Stack</li><li>Dataiku · Make · SQL avancé</li></ul></div>
+        <div class="skill-card"><div class="sk-icon">📊</div><div class="sk-name">Visualisation</div><ul><li>Power BI · Tableau</li><li>Chart.js · Dashboards temps réel</li><li>Reporting automatisé</li><li>KPIs &amp; analytics métier</li></ul></div>
+        <div class="skill-card"><div class="sk-icon">🗂️</div><div class="sk-name">Gestion de projet</div><ul><li>Agile / Scrum</li><li>Pilotage stratégique IA</li><li>Gouvernance des données</li><li>Français · Anglais (TOEIC 795)</li></ul></div>
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section class="section contact" id="contact">
+  <section class="section contact-sec" id="contact">
     <div class="container">
-      <div class="contact-block">
+      <div class="contact-inner">
         <div class="section-label">Contact</div>
-        <h2 class="contact-title">Un projet en tête ?<br />Parlons-en.</h2>
-        <p class="contact-sub">Je suis disponible pour des missions de consulting, des projets IA sur mesure ou des collaborations à long terme. Réponse sous 48 h.</p>
-        <div class="contact-links">
+        <h2 class="contact-title">Un projet à<br/>automatiser ?</h2>
+        <p class="contact-sub">Disponible pour des missions de consulting, des projets IA sur mesure ou des collaborations durables. Réponse sous 48 h.</p>
+        <div class="contact-actions">
           <a href="mailto:fetta.sizine94@gmail.com" class="btn btn-primary">fetta.sizine94@gmail.com</a>
           <a href="tel:+33666105188" class="btn btn-ghost">06 66 10 51 88</a>
         </div>
-        <div class="contact-linkedin">
-          <a href="https://linkedin.com/in/fetta-djedour" target="_blank" rel="noopener">LinkedIn — Fetta Djedour ↗</a>
-        </div>
+        <a href="https://linkedin.com/in/fetta-djedour" target="_blank" rel="noopener" class="linkedin-link">LinkedIn — Fetta Djedour ↗</a>
       </div>
     </div>
   </section>
 
   <footer class="footer">
     <div class="container footer-inner">
-      <span>Fetta Djedour · Experte IA &amp; Architecture Data</span>
+      <span>Fetta Djedour · Experte IA Appliquée — Automatisation &amp; Architecture Data</span>
       <span>© 2026</span>
     </div>
   </footer>
