@@ -1,0 +1,21 @@
+# Base de données générée
+*.db
+
+# CSV générés
+sf_*.csv
+sql_dq_report.csv
+
+# Rapport HTML généré
+salesforce_dq_report.html
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
